@@ -1,0 +1,32 @@
+body{
+    margin: 0;
+}
+
+
+#gridContainer{
+
+    display: grid;
+    grid-template-columns: repeat(16,50px) ;
+    align-content: center;
+    position: absolute;
+    top:200px;
+    
+    
+}
+
+#gridContainer div{
+    
+    height:50px;
+    width: 50px;
+    
+    background-color: lightgrey;
+    border: 1px solid grey;
+}
+
+#buttonContainer{
+    display:flex;
+    justify-content: center;
+    position :relative;
+    top:150px;
+
+}
