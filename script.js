@@ -38,12 +38,10 @@ switch(size){
     let gridGet=document.getElementById("gridContainer");
     let newDiv = document.createElement('div');
     gridGet.appendChild(newDiv);
-
-
     
-
     }
 
     }
     
-
+/*TO DO: remove old grid if new size is selected, change Background
+    color of clicked dinamyc generated divs */
