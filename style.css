@@ -1,3 +1,10 @@
+/*var to change gridSize in gridContainer*/
+:root{
+    --gridSize: repeat(16,50px);
+}
+
+
+
 body{
     margin: 0;
 }
@@ -6,7 +13,7 @@ body{
 #gridContainer{
 
     display: grid;
-    grid-template-columns: repeat(16,50px) ;
+    grid-template-columns: var(--gridSize);
     align-content: center;
     position: absolute;
     top:200px;
