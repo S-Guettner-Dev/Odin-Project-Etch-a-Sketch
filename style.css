@@ -3,10 +3,15 @@
     --gridSize: repeat(16,50px);
 }
 
-
+#title{
+    display:flex;
+    justify-content: center;
+    margin-top: 50px;
+}
 
 body{
     margin: 0;
+    background-color:darkorange;
 }
 
 
@@ -14,9 +19,8 @@ body{
 
     display: grid;
     grid-template-columns: var(--gridSize);
-    align-content: center;
-    position: absolute;
-    top:200px;
+    justify-content: center;
+    margin-top: 200px;
     
     
 }
