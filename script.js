@@ -60,7 +60,7 @@ if (gridGet.childNodes.length <=1){
 
     }
     
-/*TO DO: remove old grid if new size is selected, change Background
+/*TO DO: remove old grid if new size is(run removeGrid if removeGrid finished call create element function) selected, change Background
     color of clicked dinamyc generated divs */
 
 
@@ -70,10 +70,12 @@ if (gridGet.childNodes.length <=1){
         let checkGrid=document.getElementById("gridContainer");
         let divs = document.getElementsByClassName("gridDivs")
         console.log(checkGrid)
-    for (i=0;i<grid;i++){
-        divs[0].parentNode.removeChild(divs[0]);
-    }
-        
+
+        while(divs[0]){
+            divs[0].parentNode.removeChild(divs[0]);
+        }
+
+  
         
     }
 
@@ -84,3 +86,5 @@ if (gridGet.childNodes.length <=1){
         let gridGet=document.getElementById("gridContainer");
         console.log(gridGet.childNodes.length)
     }
+
+
