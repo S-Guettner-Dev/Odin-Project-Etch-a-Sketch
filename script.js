@@ -2,6 +2,15 @@ function createGrid(size){
     /*Creating grid from gridSize Button input*/
     const grid = size * size;
 
+   
+   
+    /*Checking if div is empty */
+
+    
+    
+    
+    
+   
     /*get the css var that defines the gridSize in gridbox*/
     let rootSelector = document.querySelector(':root');
     let rootChange = getComputedStyle(rootSelector);
@@ -37,11 +46,30 @@ switch(size){
     
     let gridGet=document.getElementById("gridContainer");
     let newDiv = document.createElement('div');
+    newDiv.setAttribute ('class','gridDivs');
     gridGet.appendChild(newDiv);
     
     }
+
+    
+ 
+
+
 
     }
     
 /*TO DO: remove old grid if new size is selected, change Background
     color of clicked dinamyc generated divs */
+
+
+
+    function removeGrid(){
+        
+        let checkGrid=document.getElementById("gridContainer");
+        
+        console.log(checkGrid)
+        
+        if (checkGrid.childNodes.length != 0) {
+        checkGrid.parentNode.removeChild(checkGrid);
+        }
+    }
