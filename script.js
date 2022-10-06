@@ -1,7 +1,9 @@
 function createGrid(size){
     /*Creating grid from gridSize Button input*/
     const grid = size * size;
-
+    
+    console.log(grid);
+    console.log(size);
     
     /*get the css var that defines the gridSize in gridbox*/
     let rootSelector = document.querySelector(':root');
@@ -49,6 +51,15 @@ if (gridGet.childNodes.length <=1){
         gridGet.appendChild(newDiv);
         
         }
+    }else {
+        const grid = size * size;
+        let checkGrid=document.getElementById("gridContainer");
+        let divs = document.getElementsByClassName("gridDivs")
+        console.log(checkGrid)
+
+        while(divs[0]){
+            divs[0].parentNode.removeChild(divs[0]);
+        }
     }
     /*Creating choosen number of divs*/
     
@@ -65,26 +76,6 @@ if (gridGet.childNodes.length <=1){
 
 
 
-    function removeGrid(size){
-        const grid = size * size;
-        let checkGrid=document.getElementById("gridContainer");
-        let divs = document.getElementsByClassName("gridDivs")
-        console.log(checkGrid)
-
-        while(divs[0]){
-            divs[0].parentNode.removeChild(divs[0]);
-        }
-
-  
-        
-    }
-
-
-    function testDivContent(){
-        let divs = document.getElementsByClassName("gridDivs");
-        
-        let gridGet=document.getElementById("gridContainer");
-        console.log(gridGet.childNodes.length)
-    }
+  let divSelector= document.querySelectorAll('div');
 
 
