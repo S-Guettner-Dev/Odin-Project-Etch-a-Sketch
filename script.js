@@ -5,6 +5,7 @@ function createGrid(size){
     console.log(grid);
     console.log(size);
     
+    
     /*get the css var that defines the gridSize in gridbox*/
     let rootSelector = document.querySelector(':root');
     let rootChange = getComputedStyle(rootSelector);
@@ -43,7 +44,7 @@ switch(size){
 let gridGet=document.getElementById("gridContainer");
 let divs = document.getElementsByClassName("gridDivs");
 
-
+let color="black";
 
 
 if (gridGet.childNodes.length <=1){
@@ -53,12 +54,15 @@ if (gridGet.childNodes.length <=1){
         let newDiv = document.createElement('div');
         newDiv.setAttribute ('class','gridDivs');
         gridGet.appendChild(newDiv);
+        
+      
 
-
+        
+        
         let divColor = document.querySelectorAll('div');
         for(let i=0;i<divColor.length;i++){
         divColor[i].onclick = function(e){
-        e.target.style.backgroundColor="black";
+        e.target.style.backgroundColor=color;
     }
 }
         
